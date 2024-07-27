@@ -127,7 +127,7 @@ HAVING COUNT(DISTINCT e2.Salary) = 1 ;-- (N-1)
 
 SELECT MAX(e1.Salary) AS NthLowestSalary
 FROM Employee e1
-LEFT JOIN Employee e2 ON e1.Salary < e2.salary
+LEFT JOIN Employee e2 ON e1.Salary > e2.salary
 GROUP BY e1.Salary
 HAVING COUNT(DISTINCT e2.Salary) = 1 ;-- (N-1)
 
